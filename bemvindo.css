@@ -1,0 +1,123 @@
+
+/* CSS DO TOP DA PAGINA */
+
+#container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+    grid-template-rows: 130px 80% 15vh;
+}
+
+body{
+    background-color: rgb(163, 216, 163);
+    padding: 0;
+    margin: 0;
+}
+
+#cabecalho{
+    grid-area: cabecalho;
+    background-color: rgb(163, 216, 163);
+    display: flex;
+    justify-content: space-between;
+}
+
+#cabecalho h1{
+    text-align: left;
+    color: #204162;
+    padding-top: 10PX;
+    padding-left: 30px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+#menu ul{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+#menu ul li{
+    display: inline;
+    padding-right: 20px;
+}
+
+#menu ul li a{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none ;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: inline-block;
+    background-color: #175ae1;
+    border-radius: 100px;
+    font-weight: bolder;
+}
+
+#menu ul li a:hover{
+    background-color: #163049;
+    color: white;
+    border-radius: 100px;
+    box-shadow: 10px 10px 5px black;
+}
+/* .......................................... */
+
+
+/* CSS DO CONTEUDO */
+#conteudo{
+    grid-area: conteudo;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#conteudo h1{
+    padding-top: 50px;
+    color: #204162;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    padding-bottom: 50px;
+}
+
+#conteudo p{
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+/* .......................................... */
+
+/* CSS DO RODAPE */
+#rodape{
+    grid-area: rodape;
+    background-color: rgb(163, 216, 163);
+    font-family: Arial, Helvetica, sans-serif;
+    color:#204162;
+    padding-bottom: 10px;
+    display: flex;    
+    justify-content: space-between;
+
+}
+
+#rodape p{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+#rodape .rod1{
+    text-align: center;
+    padding-left: 15%;
+
+}
+
+#rodape .rod2{
+    text-align: center;
+    padding-right: 15%;
+}
+

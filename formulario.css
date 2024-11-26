@@ -1,0 +1,175 @@
+#container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+    grid-template-rows: 130px 100% 15vh;
+}
+
+body{
+    background-color: rgb(163, 216, 163);
+    padding: 0;
+    margin: 0;
+}
+
+#cabecalho{
+    grid-area: cabecalho;
+    background-color: #a3d8a3;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cabecalho h1{
+    text-align: left;
+    color: #204162;
+    padding-top: 10PX;
+    padding-left: 30px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+#menu ul{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+#menu ul li{
+    display: inline;
+    padding-right: 20px;
+}
+
+#menu ul li a{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none ;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: inline-block;
+    background-color: #175ae1;
+    border-radius: 100px;
+    font-weight: bolder;
+}
+
+#menu ul li a:hover{
+    background-color: #163049;
+    color: white;
+    border-radius: 100px;
+    box-shadow: 10px 10px 5px black;
+}
+/* .......................................... */
+
+
+/* CSS DO CONTEUDO DA PAGINA */ 
+#conteudo{
+    grid-area: conteudo;
+    background-color: #212121;
+    padding-bottom: 40px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.conteudo1{
+    background-color: white;
+    border-radius:  14px;
+    margin: 14px;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: 0 3px 5px rgba(0,0,0,0.5);
+    overflow: hidden;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+
+}
+
+.header{
+    background: linear-gradient(90deg, #3af03a 0%, #9c8bff 100%) ;
+    padding: 1px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.form{
+    padding: 18px;
+}
+
+.form-content{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+    font-size: 20px;
+}
+
+.form-content label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input{
+    display: block;
+    width: 98%;
+    border-radius:  8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+}
+
+.form-content input::placeholder{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.form button{
+    background-color: #00c3ff;
+    color: #fff;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-content.error input{
+    border-color: red;
+}
+
+.form-content.error a{
+    color: red;
+}
+
+/* .......................................... */
+
+
+/* CSS DO RODAPE */
+#rodape{
+    grid-area: rodape;
+    background-color: rgb(163, 216, 163);
+    font-family: Arial, Helvetica, sans-serif;
+    color:#204162;
+    display: flex;    
+    justify-content: space-between;
+    padding-bottom: 10px;}
+
+#rodape p{
+    font-size: 15px;
+}
+
+#rodape .rod1{
+    text-align: center;
+    padding-left: 15%;
+
+}
+
+#rodape .rod2{
+    text-align: center;
+    padding-right: 15%;
+}
+

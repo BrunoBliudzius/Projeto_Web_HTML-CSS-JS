@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SEJA VOLUNTÁRIO </title>
+    <link rel="shortcut icon" type="imagex/png" href="short icon.png">
+    <link rel="stylesheet" href="formulario.css">
+  
+</head>
+<body>
+    <div id="container">
+        <!-- PARTE DO CABEÇALHO E MENU -->
+        <div id="cabecalho">
+            <h1>Projeto Sorriso Verde</h1>
+            <nav id="menu">
+                <Ul>
+                    <li><A href="home.html"> HOME </A></li>
+                    <li><a href="formulario.html"> SEJA VOLUNTÁRIO </a></li>
+                    <li><a href="voluntarios.jsp"> NOSSOS VOLUNTÁRIOS </a></li>
+                </Ul>
+            </nav>
+        </div>
+        <!--.............................-->
+
+        <!-- PARTE DOS CONTEUDOS DA PAGINA  -->
+        <div id="conteudo">
+
+            <div class="conteudo1">
+                <section class="header">
+                    <h2>Cadastro</h2>
+                </section>
+
+                <form action="grava.jsp" name="form1" id="form" class="form" method="post">
+                    <div class="form-content">
+                        <label for="nome">Nome do Voluntario:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite o seu Telefone..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="profissao">Profissão:</label>
+                        <input type="text" id="profissao" name="profissao" placeholder="Digite a sua profissão..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" placeholder="Digite o seu CEP..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="idade">Idade:</label>
+                        <input type="text" id="idade" name="idade" placeholder="Digite a sua idade..." required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite o seu Email..." required>
+                    </div>
+
+                    <button type="submit" onclick="verificar()"><strong>Enviar</strong></button>
+
+                </form>
+            </div>
+
+            <script>
+            
+                  function verificar(){
+          
+                      var nome = document.getElementById("nome").value;
+                      if(nome.length < 3){
+                          document.getElementById("nome").style.background = "#e59b9b";
+                          document.getElementById("nome").placeholder="Seu nome deve ter 3 letras no mínimo";
+
+                      } else{
+                          document.getElementById("nome").style.background = "#b4b4b4";
+                          document.getElementById("nome").style.color = "black"
+
+                      }
+                      
+                      var cpf = document.getElementById("cpf").value;
+                      if(cpf.length < 11 || isNaN(cpf)){
+                        document.getElementById("cpf").style.background = "#e59b9b";
+                        document.getElementById("cpf").placeholder="Seu CPF deve ter 11 digitos no mínimo";
+                      }else{
+                        document.getElementById("cpf").style.background = "#b4b4b4";
+                        document.getElementById("cpf").style.color = "black"
+                      }
+
+                      var telefone = document.getElementById("telefone").value;
+                      if(telefone.length < 8 || isNaN(telefone)){
+                        document.getElementById("telefone").style.background = "#e59b9b";
+                        document.getElementById("telefone").placeholder="Seu telefone deve ter no mínimo 8 digitos";
+                      }else{
+                        document.getElementById("telefone").style.background = "#b4b4b4";
+                        document.getElementById("telefone").style.color = "black"
+                      }
+
+                      var profissao = document.getElementById("profissao").value;
+                      if(profissao.length == 0){
+                        document.getElementById("profissao").style.background = "#e59b9b";
+                        document.getElementById("profissao").placeholder="Este campo não pode ficar vazio!";
+                      }else{
+                        document.getElementById("profissao").style.background = "#b4b4b4";
+                        document.getElementById("profissao").style.color = "black"
+                      }
+
+                      var cep = document.getElementById("cep").value;
+                      if(cep.length < 8 || isNaN(cep)){
+                        document.getElementById("cep").style.background = "#e59b9b";
+                        document.getElementById("cep").placeholder="Seu CEP deve ter 8 digitos no mínimo";
+                      }else{
+                        document.getElementById("cep").style.background = "#b4b4b4";
+                        document.getElementById("cep").style.color = "black"
+                      }
+
+                      var idade = document.getElementById("idade").value;
+                      if(idade.length <= 0 || isNaN(idade)){
+                        document.getElementById("idade").style.background = "#e59b9b";
+                        document.getElementById("idade").placeholder="Digite apenas números nesse campo";
+                      }else{
+                        document.getElementById("idade").style.background = "#b4b4b4";
+                        document.getElementById("idade").style.color = "black"
+                      }
+                     
+                      var email = document.getElementById("email").value;
+                        if( email.indexOf("@") < 0 ){
+                        document.getElementById("email").style.background = "#e59b9b";
+                        document.getElementById("email").placeholder="Este campo precisa do @ para seguir";
+                      }else{
+                        document.getElementById("email").style.background = "#b4b4b4";
+                        document.getElementById("email").style.color = "black"
+                      }
+
+                  }
+              </script>        
+
+
+
+        </div>
+        <div id="rodape">
+            <div class="rod1">
+                <p> <strong>Projeto Tecnologia Web - Eniac 2024</strong> </p>
+                <p> <strong> Desenvolvido por: <br>
+                             Bruno Bliudzius; </strong> <br>
+                    <strong> Leonardo Geraldes;</strong><br>
+                    <strong> Alexsander Camargo.</strong>
+                </p>
+            </div>
+            <div class="rod2">
+                <p> <strong> Endereço: <br>
+                    Avenida Jose Miguel Ackel, Nº 9999; </strong> <br>
+                    <strong> Quadrab Casa 137 no bairro Jardim Guilhermino em Guarulhos;</strong><br>
+                    <strong> CEP 07273-000.</strong>
+                </p>
+                <p> <strong> Siga nossa pagina @projetosorrisoverde </strong> </p>
+            </div>
+        </div>
+	</div>			<!--.............................-->
+</body>
+</html>
